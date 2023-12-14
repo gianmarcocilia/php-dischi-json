@@ -30,16 +30,26 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 p-3" v-for="(film, index) in filmList" :key="index">
-                        <div class="my-card h-100 text-white">
+                        <div class="my-card h-100 text-white" @click="showInfoFilm(index)">
                             <img :src="film.poster" class="card-img-top mb-2    " alt="">
                             <div class="text-center">
                                 <h5 class="m-0 p-1">{{ film.title }}</h5>
                             </div>
-                            <ul class="p-0 m-0 text-center">
+                            <ul>
                                 <li>{{ film.author }}</li>
                                 <li>{{ film.year }}</li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+                <div class="info-film">
+                    <div class="info-card">
+                        <img :src="infoFilm.poster" alt="">
+                        <h5>{{ infoFilm.title }}</h5>
+                        <ul>
+                            <li>{{ infoFilm.author }}</li>
+                            <li>{{ infoFilm.year }}</li>
+                        </ul>
                     </div>
                 </div>
             </div>

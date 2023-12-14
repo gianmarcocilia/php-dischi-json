@@ -4,6 +4,7 @@ createApp({
         return {
             filmList: [],
             apiUrl: 'server.php',
+            infoFilm: [],
         }
     },
     created() {
@@ -13,6 +14,14 @@ createApp({
         })
     },
     methods: {
-
+        showInfoFilm(clickedIndex) {
+            axios.get(this.apiUrl, {params: {
+                index: clickedIndex
+            }}).then((resp) => {
+                console.log(resp.data);
+                this.infoFilm = resp.data;
+                console.log(this.infoFilm);
+            })
+        }
     },
 }).mount('#app');
