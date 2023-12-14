@@ -4,7 +4,7 @@ createApp({
         return {
             filmList: [],
             apiUrl: 'server.php',
-            infoFilm: [],
+            infoFilm: null,
         }
     },
     created() {
@@ -22,6 +22,9 @@ createApp({
                 this.infoFilm = resp.data;
                 console.log(this.infoFilm);
             })
+        },
+        closeInfo() {
+            this.infoFilm = null;
         }
     },
 }).mount('#app');
