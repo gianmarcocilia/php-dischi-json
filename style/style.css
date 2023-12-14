@@ -1,0 +1,43 @@
+:root {
+    --header-heigth: 100px;
+    --header-bg-color: rgb(6 19 31);
+    --main-bg-color: rgb(29 45 60);
+    --card-bg-color: rgb(17 32 48);
+}
+
+/* APP */
+#app {
+    height: 100vh;
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    height: var(--header-heigth);
+    background-color: var(--header-bg-color);
+}
+.logo {
+    width: calc(var(--header-heigth) - 20px);
+}
+
+/* MAIN */
+main {
+    background-color: var(--main-bg-color);
+    height: calc(100% - var(--header-heigth));
+    overflow: auto;
+}
+
+/* Card */
+.my-card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: .2rem 0;
+}
